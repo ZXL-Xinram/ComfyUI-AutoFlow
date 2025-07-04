@@ -1,0 +1,139 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# ComfyUI specific
+*.ckpt
+*.safetensors
+*.pt
+*.pth
+*.bin
+models/
+checkpoints/
+loras/
+vae/
+embeddings/
+controlnet/
+clip_vision/
+upscale_models/
+style_models/
+input/
+output/
+temp/
+logs/
+
+# Large media files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.webp
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.flv
+*.wav
+*.mp3
+*.ogg
+*.flac
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.cache
+*.bak
+*.orig
+*.rej
+
+# Package files
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Local configuration
+config.local.json
+settings.local.json
+.local/
+
+# Debug files
+debug/
+debug_logs/
+crash_logs/
+
+# Backup files
+*~
+*.backup
+*.bak
+
+# Node.js (if using web components)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
