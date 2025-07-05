@@ -55,6 +55,14 @@ class TimestampGenerator:
     FUNCTION = "generate_timestamp"
     CATEGORY = "AutoFlow/utilities"
     
+    @classmethod
+    def IS_CHANGED(cls, **kwargs):
+        """
+        告诉ComfyUI这个节点总是需要重新执行
+        因为每次都需要生成新的时间戳
+        """
+        return float("nan")
+    
     def generate_timestamp(self, format, custom_format="", use_utc=False, add_milliseconds=False):
         """
         生成时间戳
