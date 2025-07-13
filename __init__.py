@@ -23,6 +23,7 @@ try:
         StringFormatter,
         StringCase
     )
+    from .nodes.utilities.timestamp_generator import TimestampGenerator, TimestampFormatter
     
     # Node class mappings - ComfyUI uses this to identify and load nodes
     NODE_CLASS_MAPPINGS = {
@@ -38,6 +39,10 @@ try:
         "AutoFlowStringSplit": StringSplitter,
         "AutoFlowStringFormat": StringFormatter,
         "AutoFlowStringCase": StringCase,
+        
+        # Timestamp processing nodes
+        "AutoFlowTimestampGenerator": TimestampGenerator,
+        "AutoFlowTimestampFormatter": TimestampFormatter,
     }
     
     # Display name mappings - friendly names shown in ComfyUI interface
@@ -54,6 +59,10 @@ try:
         "AutoFlowStringSplit": "String Splitter",
         "AutoFlowStringFormat": "String Formatter",
         "AutoFlowStringCase": "String Case Converter",
+        
+        # Timestamp processing nodes
+        "AutoFlowTimestampGenerator": "Timestamp Generator",
+        "AutoFlowTimestampFormatter": "Timestamp Formatter",
     }
     
     # Successfully loaded nodes list
@@ -71,6 +80,9 @@ try:
     print("   • String Splitter (AutoFlowStringSplit)")
     print("   • String Formatter (AutoFlowStringFormat)")
     print("   • String Case Converter (AutoFlowStringCase)")
+    print("   Timestamp Processing Nodes:")
+    print("   • Timestamp Generator (AutoFlowTimestampGenerator)")
+    print("   • Timestamp Formatter (AutoFlowTimestampFormatter)")
     
 except Exception as e:
     print(f"❌ [ComfyUI-AutoFlow] Failed to load nodes: {str(e)}")
@@ -86,16 +98,16 @@ except Exception as e:
 WEB_DIRECTORY = "./web"
 
 # Package information
-__version__ = "2.0.0"
+__version__ = "2.1.0"
 __author__ = "ComfyUI-AutoFlow"
-__description__ = "ComfyUI path processing and string operation node collection"
+__description__ = "ComfyUI path processing, string operation and timestamp generation node collection"
 
 # Print loading information
 print(f"🚀 [ComfyUI-AutoFlow] v{__version__} initialization complete")
 print(f"📁 Node location: {current_dir}")
 if LOADED_NODES:
     print(f"💡 Usage: Look for 'AutoFlow' category in the node menu")
-    print(f"🔧 Features: Provides path parsing and string operation tools")
+    print(f"🔧 Features: Path parsing, string operations, and filesystem-safe timestamp generation")
 else:
     print("⚠️ No nodes were successfully loaded, please check error messages")
 
