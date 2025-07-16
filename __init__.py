@@ -25,6 +25,7 @@ try:
     )
     from .nodes.utilities.timestamp_generator import TimestampGenerator, TimestampFormatter
     from .nodes.image.load_image_with_background import AutoFlowLoadImageWithBackground
+    from .nodes.image.load_images_for_loop_with_background import AutoFlowLoadImagesForLoopWithBackground
     
     # Node class mappings - ComfyUI uses this to identify and load nodes
     NODE_CLASS_MAPPINGS = {
@@ -47,6 +48,7 @@ try:
         
         # Image processing nodes
         "AutoFlowLoadImageWithBackground": AutoFlowLoadImageWithBackground,
+        "AutoFlowLoadImagesForLoopWithBackground": AutoFlowLoadImagesForLoopWithBackground,
     }
     
     # Display name mappings - friendly names shown in ComfyUI interface
@@ -70,6 +72,7 @@ try:
         
         # Image processing nodes
         "AutoFlowLoadImageWithBackground": "Load Image with Background",
+        "AutoFlowLoadImagesForLoopWithBackground": "Load Images For Loop with Background",
     }
     
     # Successfully loaded nodes list
@@ -92,6 +95,7 @@ try:
     print("   • Timestamp Formatter (AutoFlowTimestampFormatter)")
     print("   Image Processing Nodes:")
     print("   • Load Image with Background (AutoFlowLoadImageWithBackground)")
+    print("   • Load Images For Loop with Background (AutoFlowLoadImagesForLoopWithBackground)")
     
 except Exception as e:
     print(f"❌ [ComfyUI-AutoFlow] Failed to load nodes: {str(e)}")
