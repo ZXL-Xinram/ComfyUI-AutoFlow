@@ -24,6 +24,8 @@ try:
         StringCase
     )
     from .nodes.utilities.timestamp_generator import TimestampGenerator, TimestampFormatter
+    from .nodes.utilities.condition_checker import AutoFlowConditionChecker
+    from .nodes.utilities.condition_assignment import AutoFlowConditionAssignment
     from .nodes.image.load_image_with_background import AutoFlowLoadImageWithBackground
     from .nodes.image.load_images_for_loop_with_background import AutoFlowLoadImagesForLoopWithBackground
     
@@ -45,6 +47,10 @@ try:
         # Timestamp processing nodes
         "AutoFlowTimestampGenerator": TimestampGenerator,
         "AutoFlowTimestampFormatter": TimestampFormatter,
+        
+        # Condition processing nodes
+        "AutoFlowConditionChecker": AutoFlowConditionChecker,
+        "AutoFlowConditionAssignment": AutoFlowConditionAssignment,
         
         # Image processing nodes
         "AutoFlowLoadImageWithBackground": AutoFlowLoadImageWithBackground,
@@ -70,6 +76,10 @@ try:
         "AutoFlowTimestampGenerator": "Timestamp Generator",
         "AutoFlowTimestampFormatter": "Timestamp Formatter",
         
+        # Condition processing nodes
+        "AutoFlowConditionChecker": "Condition Checker",
+        "AutoFlowConditionAssignment": "Condition Assignment",
+        
         # Image processing nodes
         "AutoFlowLoadImageWithBackground": "Load Image with Background",
         "AutoFlowLoadImagesForLoopWithBackground": "Load Images For Loop with Background",
@@ -93,6 +103,9 @@ try:
     print("   Timestamp Processing Nodes:")
     print("   • Timestamp Generator (AutoFlowTimestampGenerator)")
     print("   • Timestamp Formatter (AutoFlowTimestampFormatter)")
+    print("   Condition Processing Nodes:")
+    print("   • Condition Checker (AutoFlowConditionChecker)")
+    print("   • Condition Assignment (AutoFlowConditionAssignment)")
     print("   Image Processing Nodes:")
     print("   • Load Image with Background (AutoFlowLoadImageWithBackground)")
     print("   • Load Images For Loop with Background (AutoFlowLoadImagesForLoopWithBackground)")
