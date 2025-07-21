@@ -28,6 +28,7 @@ try:
     from .nodes.utilities.condition_assignment import AutoFlowConditionAssignment
     from .nodes.image.load_image_with_background import AutoFlowLoadImageWithBackground
     from .nodes.image.load_images_for_loop_with_background import AutoFlowLoadImagesForLoopWithBackground
+    from .nodes.image.image_resize_calculator import AutoFlowImageResizeCalculator
     
     # Node class mappings - ComfyUI uses this to identify and load nodes
     NODE_CLASS_MAPPINGS = {
@@ -55,6 +56,7 @@ try:
         # Image processing nodes
         "AutoFlowLoadImageWithBackground": AutoFlowLoadImageWithBackground,
         "AutoFlowLoadImagesForLoopWithBackground": AutoFlowLoadImagesForLoopWithBackground,
+        "AutoFlowImageResizeCalculator": AutoFlowImageResizeCalculator,
     }
     
     # Display name mappings - friendly names shown in ComfyUI interface
@@ -83,6 +85,7 @@ try:
         # Image processing nodes
         "AutoFlowLoadImageWithBackground": "Load Image with Background",
         "AutoFlowLoadImagesForLoopWithBackground": "Load Images For Loop with Background",
+        "AutoFlowImageResizeCalculator": "Image Resize Calculator",
     }
     
     # Successfully loaded nodes list
@@ -109,6 +112,7 @@ try:
     print("   Image Processing Nodes:")
     print("   • Load Image with Background (AutoFlowLoadImageWithBackground)")
     print("   • Load Images For Loop with Background (AutoFlowLoadImagesForLoopWithBackground)")
+    print("   • Image Resize Calculator (AutoFlowImageResizeCalculator)")
     
 except Exception as e:
     print(f"❌ [ComfyUI-AutoFlow] Failed to load nodes: {str(e)}")
