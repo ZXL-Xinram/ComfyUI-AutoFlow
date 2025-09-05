@@ -26,6 +26,11 @@ try:
     from .nodes.utilities.timestamp_generator import TimestampGenerator, TimestampFormatter
     from .nodes.utilities.condition_checker import AutoFlowConditionChecker
     from .nodes.utilities.condition_assignment import AutoFlowConditionAssignment
+    from .nodes.utilities.int_to_list_converter import (
+        AutoFlowIntToListConverter,
+        AutoFlowListToIntExtractor,
+        AutoFlowListLength
+    )
     from .nodes.image.load_image_with_background import AutoFlowLoadImageWithBackground
     from .nodes.image.load_images_for_loop_with_background import AutoFlowLoadImagesForLoopWithBackground
     from .nodes.image.image_resize_calculator import AutoFlowImageResizeCalculator
@@ -52,6 +57,11 @@ try:
         # Condition processing nodes
         "AutoFlowConditionChecker": AutoFlowConditionChecker,
         "AutoFlowConditionAssignment": AutoFlowConditionAssignment,
+        
+        # Type conversion nodes
+        "AutoFlowIntToListConverter": AutoFlowIntToListConverter,
+        "AutoFlowListToIntExtractor": AutoFlowListToIntExtractor,
+        "AutoFlowListLength": AutoFlowListLength,
         
         # Image processing nodes
         "AutoFlowLoadImageWithBackground": AutoFlowLoadImageWithBackground,
@@ -82,6 +92,11 @@ try:
         "AutoFlowConditionChecker": "Condition Checker",
         "AutoFlowConditionAssignment": "Condition Assignment",
         
+        # Type conversion nodes
+        "AutoFlowIntToListConverter": "Int to List Converter",
+        "AutoFlowListToIntExtractor": "List to Int Extractor",
+        "AutoFlowListLength": "List Length",
+        
         # Image processing nodes
         "AutoFlowLoadImageWithBackground": "Load Image with Background",
         "AutoFlowLoadImagesForLoopWithBackground": "Load Images For Loop with Background",
@@ -109,6 +124,10 @@ try:
     print("   Condition Processing Nodes:")
     print("   • Condition Checker (AutoFlowConditionChecker)")
     print("   • Condition Assignment (AutoFlowConditionAssignment)")
+    print("   Type Conversion Nodes:")
+    print("   • Int to List Converter (AutoFlowIntToListConverter)")
+    print("   • List to Int Extractor (AutoFlowListToIntExtractor)")
+    print("   • List Length (AutoFlowListLength)")
     print("   Image Processing Nodes:")
     print("   • Load Image with Background (AutoFlowLoadImageWithBackground)")
     print("   • Load Images For Loop with Background (AutoFlowLoadImagesForLoopWithBackground)")

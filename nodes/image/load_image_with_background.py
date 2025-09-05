@@ -43,8 +43,8 @@ class AutoFlowLoadImageWithBackground:
         }
 
     CATEGORY = "AutoFlow/image"
-    RETURN_TYPES = ("IMAGE", "MASK")
-    RETURN_NAMES = ("image", "mask")
+    RETURN_TYPES = ("IMAGE", "MASK", "STRING")
+    RETURN_NAMES = ("image", "mask", "image_path")
     FUNCTION = "load_image"
 
     def get_background_color(self, color_name):
@@ -64,6 +64,8 @@ class AutoFlowLoadImageWithBackground:
 
     def load_image(self, image, background_color):
         image_path = folder_paths.get_annotated_filepath(image)
+        # 获取图片的绝对路径
+        absolute_image_path = os.path.abspath(image_path)
         img = node_helpers.pillow(Image.open, image_path)
 
         output_images = []
@@ -125,4 +127,4 @@ class AutoFlowLoadImageWithBackground:
             output_image = output_images[0]
             output_mask = output_masks[0]
 
-        return (output_image, output_mask) 
+        return (output_image, output_mask, absolute_image_path) 
