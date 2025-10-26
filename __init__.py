@@ -34,6 +34,7 @@ try:
     from .nodes.image.load_image_with_background import AutoFlowLoadImageWithBackground
     from .nodes.image.load_images_for_loop_with_background import AutoFlowLoadImagesForLoopWithBackground
     from .nodes.image.image_resize_calculator import AutoFlowImageResizeCalculator
+    from .nodes.utilities.export_textured_mesh import AutoFlowExportTexturedMesh
     
     # Node class mappings - ComfyUI uses this to identify and load nodes
     NODE_CLASS_MAPPINGS = {
@@ -67,6 +68,9 @@ try:
         "AutoFlowLoadImageWithBackground": AutoFlowLoadImageWithBackground,
         "AutoFlowLoadImagesForLoopWithBackground": AutoFlowLoadImagesForLoopWithBackground,
         "AutoFlowImageResizeCalculator": AutoFlowImageResizeCalculator,
+        
+        # 3D mesh export nodes
+        "AutoFlowExportTexturedMesh": AutoFlowExportTexturedMesh,
     }
     
     # Display name mappings - friendly names shown in ComfyUI interface
@@ -101,6 +105,9 @@ try:
         "AutoFlowLoadImageWithBackground": "Load Image with Background",
         "AutoFlowLoadImagesForLoopWithBackground": "Load Images For Loop with Background",
         "AutoFlowImageResizeCalculator": "Image Resize Calculator",
+        
+        # 3D mesh export nodes
+        "AutoFlowExportTexturedMesh": "Export Textured Mesh",
     }
     
     # Successfully loaded nodes list
@@ -132,6 +139,8 @@ try:
     print("   • Load Image with Background (AutoFlowLoadImageWithBackground)")
     print("   • Load Images For Loop with Background (AutoFlowLoadImagesForLoopWithBackground)")
     print("   • Image Resize Calculator (AutoFlowImageResizeCalculator)")
+    print("   3D Mesh Export Nodes:")
+    print("   • Export Textured Mesh (AutoFlowExportTexturedMesh)")
     
 except Exception as e:
     print(f"❌ [ComfyUI-AutoFlow] Failed to load nodes: {str(e)}")
