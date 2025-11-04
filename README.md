@@ -1,6 +1,6 @@
 # ComfyUI-AutoFlow
 
-A collection of utility nodes for ComfyUI focused on path processing and string operations.
+A collection of utility nodes for ComfyUI focused on path processing, string operations, and video processing.
 
 ## Features
 
@@ -16,6 +16,25 @@ A collection of utility nodes for ComfyUI focused on path processing and string 
 - **String Splitter**: Split strings by delimiter into multiple parts
 - **String Formatter**: Format strings using Python format syntax
 - **String Case Converter**: Convert string case (upper, lower, title, etc.)
+
+### Video Processing Nodes 🎬 NEW!
+- **Video To Images**: Convert video files to image sequences
+- **Add Alpha Channel**: Add mask as alpha channel to create transparent images
+- **Save Images With Alpha**: Save transparent PNG image sequences
+- **Combine Video And Mask**: One-step solution to combine video and mask into transparent PNGs
+
+**✨ Key Features:**
+- 🔄 **Dual Input Modes**: Upload mode or Path mode (boolean toggle)
+- 📤 **Upload Button**: Click to browse and upload videos directly ⭐ NEW
+- 🎬 **Video Preview**: Loop preview in node after selection ⭐ NEW
+- 📁 **Flexible**: Process videos from anywhere on your system
+- 🚀 **Batch-Friendly**: Perfect for automation and batch processing
+- 🎯 **Easy to Use**: Choose the mode that fits your workflow
+
+📖 **Documentation**:
+- [VIDEO_ALPHA_GUIDE.md](./VIDEO_ALPHA_GUIDE.md) - Complete video processing guide
+- [VIDEO_INPUT_MODES.md](./VIDEO_INPUT_MODES.md) - Input modes comparison and usage
+- [COMFYUI_FRONTEND_DEV_RULES.md](./COMFYUI_FRONTEND_DEV_RULES.md) - Frontend extension development rules
 
 ## Installation
 

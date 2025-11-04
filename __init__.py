@@ -35,6 +35,12 @@ try:
     from .nodes.image.load_images_for_loop_with_background import AutoFlowLoadImagesForLoopWithBackground
     from .nodes.image.image_resize_calculator import AutoFlowImageResizeCalculator
     from .nodes.utilities.export_textured_mesh import AutoFlowExportTexturedMesh
+    from .nodes.video.video_alpha_tools import (
+        AutoFlowVideoToImages,
+        AutoFlowAddAlphaChannel,
+        AutoFlowSaveImagesWithAlpha,
+        AutoFlowCombineVideoAndMask
+    )
     
     # Node class mappings - ComfyUI uses this to identify and load nodes
     NODE_CLASS_MAPPINGS = {
@@ -71,6 +77,12 @@ try:
         
         # 3D mesh export nodes
         "AutoFlowExportTexturedMesh": AutoFlowExportTexturedMesh,
+        
+        # Video processing nodes
+        "AutoFlowVideoToImages": AutoFlowVideoToImages,
+        "AutoFlowAddAlphaChannel": AutoFlowAddAlphaChannel,
+        "AutoFlowSaveImagesWithAlpha": AutoFlowSaveImagesWithAlpha,
+        "AutoFlowCombineVideoAndMask": AutoFlowCombineVideoAndMask,
     }
     
     # Display name mappings - friendly names shown in ComfyUI interface
@@ -108,6 +120,12 @@ try:
         
         # 3D mesh export nodes
         "AutoFlowExportTexturedMesh": "Export Textured Mesh",
+        
+        # Video processing nodes
+        "AutoFlowVideoToImages": "Video To Images",
+        "AutoFlowAddAlphaChannel": "Add Alpha Channel",
+        "AutoFlowSaveImagesWithAlpha": "Save Images With Alpha",
+        "AutoFlowCombineVideoAndMask": "Combine Video And Mask (One-Step)",
     }
     
     # Successfully loaded nodes list
@@ -141,6 +159,11 @@ try:
     print("   • Image Resize Calculator (AutoFlowImageResizeCalculator)")
     print("   3D Mesh Export Nodes:")
     print("   • Export Textured Mesh (AutoFlowExportTexturedMesh)")
+    print("   Video Processing Nodes:")
+    print("   • Video To Images (AutoFlowVideoToImages)")
+    print("   • Add Alpha Channel (AutoFlowAddAlphaChannel)")
+    print("   • Save Images With Alpha (AutoFlowSaveImagesWithAlpha)")
+    print("   • Combine Video And Mask (AutoFlowCombineVideoAndMask)")
     
 except Exception as e:
     print(f"❌ [ComfyUI-AutoFlow] Failed to load nodes: {str(e)}")
