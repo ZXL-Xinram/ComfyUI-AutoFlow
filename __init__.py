@@ -24,6 +24,23 @@ try:
         StringCase
     )
     from .nodes.utilities.timestamp_generator import TimestampGenerator, TimestampFormatter
+    from .nodes.utilities.condition_checker import AutoFlowConditionChecker
+    from .nodes.utilities.condition_assignment import AutoFlowConditionAssignment
+    from .nodes.utilities.int_to_list_converter import (
+        AutoFlowIntToListConverter,
+        AutoFlowListToIntExtractor,
+        AutoFlowListLength
+    )
+    from .nodes.image.load_image_with_background import AutoFlowLoadImageWithBackground
+    from .nodes.image.load_images_for_loop_with_background import AutoFlowLoadImagesForLoopWithBackground
+    from .nodes.image.image_resize_calculator import AutoFlowImageResizeCalculator
+    from .nodes.utilities.export_textured_mesh import AutoFlowExportTexturedMesh
+    from .nodes.video.video_alpha_tools import (
+        AutoFlowVideoToImages,
+        AutoFlowAddAlphaChannel,
+        AutoFlowSaveImagesWithAlpha,
+        AutoFlowCombineVideoAndMask
+    )
     
     # Node class mappings - ComfyUI uses this to identify and load nodes
     NODE_CLASS_MAPPINGS = {
@@ -43,6 +60,29 @@ try:
         # Timestamp processing nodes
         "AutoFlowTimestampGenerator": TimestampGenerator,
         "AutoFlowTimestampFormatter": TimestampFormatter,
+        
+        # Condition processing nodes
+        "AutoFlowConditionChecker": AutoFlowConditionChecker,
+        "AutoFlowConditionAssignment": AutoFlowConditionAssignment,
+        
+        # Type conversion nodes
+        "AutoFlowIntToListConverter": AutoFlowIntToListConverter,
+        "AutoFlowListToIntExtractor": AutoFlowListToIntExtractor,
+        "AutoFlowListLength": AutoFlowListLength,
+        
+        # Image processing nodes
+        "AutoFlowLoadImageWithBackground": AutoFlowLoadImageWithBackground,
+        "AutoFlowLoadImagesForLoopWithBackground": AutoFlowLoadImagesForLoopWithBackground,
+        "AutoFlowImageResizeCalculator": AutoFlowImageResizeCalculator,
+        
+        # 3D mesh export nodes
+        "AutoFlowExportTexturedMesh": AutoFlowExportTexturedMesh,
+        
+        # Video processing nodes
+        "AutoFlowVideoToImages": AutoFlowVideoToImages,
+        "AutoFlowAddAlphaChannel": AutoFlowAddAlphaChannel,
+        "AutoFlowSaveImagesWithAlpha": AutoFlowSaveImagesWithAlpha,
+        "AutoFlowCombineVideoAndMask": AutoFlowCombineVideoAndMask,
     }
     
     # Display name mappings - friendly names shown in ComfyUI interface
@@ -63,6 +103,29 @@ try:
         # Timestamp processing nodes
         "AutoFlowTimestampGenerator": "Timestamp Generator",
         "AutoFlowTimestampFormatter": "Timestamp Formatter",
+        
+        # Condition processing nodes
+        "AutoFlowConditionChecker": "Condition Checker",
+        "AutoFlowConditionAssignment": "Condition Assignment",
+        
+        # Type conversion nodes
+        "AutoFlowIntToListConverter": "Int to List Converter",
+        "AutoFlowListToIntExtractor": "List to Int Extractor",
+        "AutoFlowListLength": "List Length",
+        
+        # Image processing nodes
+        "AutoFlowLoadImageWithBackground": "Load Image with Background",
+        "AutoFlowLoadImagesForLoopWithBackground": "Load Images For Loop with Background",
+        "AutoFlowImageResizeCalculator": "Image Resize Calculator",
+        
+        # 3D mesh export nodes
+        "AutoFlowExportTexturedMesh": "Export Textured Mesh",
+        
+        # Video processing nodes
+        "AutoFlowVideoToImages": "Video To Images",
+        "AutoFlowAddAlphaChannel": "Add Alpha Channel",
+        "AutoFlowSaveImagesWithAlpha": "Save Images With Alpha",
+        "AutoFlowCombineVideoAndMask": "Combine Video And Mask (One-Step)",
     }
     
     # Successfully loaded nodes list
@@ -83,6 +146,24 @@ try:
     print("   Timestamp Processing Nodes:")
     print("   • Timestamp Generator (AutoFlowTimestampGenerator)")
     print("   • Timestamp Formatter (AutoFlowTimestampFormatter)")
+    print("   Condition Processing Nodes:")
+    print("   • Condition Checker (AutoFlowConditionChecker)")
+    print("   • Condition Assignment (AutoFlowConditionAssignment)")
+    print("   Type Conversion Nodes:")
+    print("   • Int to List Converter (AutoFlowIntToListConverter)")
+    print("   • List to Int Extractor (AutoFlowListToIntExtractor)")
+    print("   • List Length (AutoFlowListLength)")
+    print("   Image Processing Nodes:")
+    print("   • Load Image with Background (AutoFlowLoadImageWithBackground)")
+    print("   • Load Images For Loop with Background (AutoFlowLoadImagesForLoopWithBackground)")
+    print("   • Image Resize Calculator (AutoFlowImageResizeCalculator)")
+    print("   3D Mesh Export Nodes:")
+    print("   • Export Textured Mesh (AutoFlowExportTexturedMesh)")
+    print("   Video Processing Nodes:")
+    print("   • Video To Images (AutoFlowVideoToImages)")
+    print("   • Add Alpha Channel (AutoFlowAddAlphaChannel)")
+    print("   • Save Images With Alpha (AutoFlowSaveImagesWithAlpha)")
+    print("   • Combine Video And Mask (AutoFlowCombineVideoAndMask)")
     
 except Exception as e:
     print(f"❌ [ComfyUI-AutoFlow] Failed to load nodes: {str(e)}")
